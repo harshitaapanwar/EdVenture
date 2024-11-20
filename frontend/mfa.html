@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFA - City Guruz</title>
+    <link rel="stylesheet" href="script.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Multi-Factor Authentication</h2>
+        <p class="info-text">A verification code has been sent to your email or phone. Please enter it below to continue.</p>
+        <form id="mfa-form" action="dashboard.html" method="GET">
+            <div class="input-group">
+                <label for="mfa-code">Verification Code</label>
+                <input type="text" id="mfa-code" name="mfa-code" placeholder="Enter your code" required>
+            </div>
+            <div class="actions">
+                <button type="submit">Verify</button>
+                <a href="index.html" class="back-link">Back to Login</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

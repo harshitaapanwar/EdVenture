@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment Dashboard</title>
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Assignment Management</h2>
+      <ul>
+        <li><a href="#upload">Upload Assignment</a></li>
+        <li><a href="#view">View Assignment</a></li>
+        <li><a href="#edit">Edit Assignment</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Section -->
+    <div class="main">
+      <header class="header">
+        <h1>Assignment Dashboard</h1>
+        <nav>
+          <ul class="menu">
+            <li><a href="#upload">Upload Assignment</a></li>
+            <li><a href="#view">View Assignment</a></li>
+            <li><a href="#edit">Edit Assignment</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Upload Assignment Section -->
+      <section id="upload" class="project-section">
+        <h2>Upload New Assignment</h2>
+        <form id="upload-project-form">
+          <input type="text" id="project-name" placeholder="project Name" required>
+          <textarea id="project-description" placeholder="project Description" required></textarea>
+          <input type="file" id="project-file" required>
+          <button type="submit">Upload Assignment</button>
+        </form>
+      </section>
+
+      <!-- Edit Assignment Section -->
+      <section id="edit" class="project-section">
+        <h2>Edit Existing Assignment</h2>
+        <form id="edit-project-form">
+          <select id="edit-project-select" required>
+            <option value="" disabled selected>Select an assignment to edit</option>
+          </select>
+          <input type="text" id="edit-project-name" placeholder="project Name" required>
+          <textarea id="edit-project-description" placeholder="project Description" required></textarea>
+          <label for="edit-project-file">Change Assignment File:</label>
+          <input type="file" id="edit-project-file">
+          <button type="submit">Save Changes</button>
+        </form>
+      </section>
+
+      <!-- View Assignments Section -->
+      <section id="view" class="project-section">
+        <h2>View Assignments</h2>
+        <div id="project-list">
+          <p>No assignments available. Start by uploading an assignment!</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="assignment.js"></script>
+</body>
+</html>

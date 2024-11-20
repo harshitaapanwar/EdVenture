@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Dashboard</title>
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Project Management</h2>
+      <ul>
+        <li><a href="#upload">Upload Project</a></li>
+        <li><a href="#view">View Projects</a></li>
+        <li><a href="#edit">Edit Project</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Section -->
+    <div class="main">
+      <header class="header">
+        <h1>Project Dashboard</h1>
+        <nav>
+          <ul class="menu">
+            <li><a href="#upload">Upload Project</a></li>
+            <li><a href="#view">View Projects</a></li>
+            <li><a href="#edit">Edit Project</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Upload Project Section -->
+      <section id="upload" class="project-section">
+        <h2>Upload New Project</h2>
+        <form id="upload-project-form">
+          <input type="text" id="project-name" placeholder="Project Name" required>
+          <textarea id="project-description" placeholder="Project Description" required></textarea>
+          <input type="file" id="project-file" required>
+          <button type="submit">Upload Project</button>
+        </form>
+      </section>
+
+      <!-- Edit Project Section -->
+      <section id="edit" class="project-section">
+        <h2>Edit Existing Project</h2>
+        <form id="edit-project-form">
+          <select id="edit-project-select" required>
+            <option value="" disabled selected>Select a project to edit</option>
+          </select>
+          <input type="text" id="edit-project-name" placeholder="Project Name" required>
+          <textarea id="edit-project-description" placeholder="Project Description" required></textarea>
+          <label for="edit-project-file">Change Project File:</label>
+          <input type="file" id="edit-project-file">
+          <button type="submit">Save Changes</button>
+        </form>
+      </section>
+
+      <!-- View Projects Section -->
+      <section id="view" class="project-section">
+        <h2>View Projects</h2>
+        <div id="projects-list">
+          <p>No projects available. Start by uploading a project!</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="project.js"></script>
+</body>
+</html>

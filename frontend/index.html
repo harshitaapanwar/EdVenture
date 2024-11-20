@@ -1,30 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MERN App</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - EdVenture</title>
+    <link rel="stylesheet" href="script.css">
 </head>
 <body>
-  <div id="app">
-    <h1>Login</h1>
-    <form id="login-form">
-      <input type="email" id="email" placeholder="Email" required>
-      <input type="password" id="password" placeholder="Password" required>
-      
-      <!-- Role Selection -->
-      <label for="role">Select Role:</label>
-      <select id="role" required>
-        <option value="student">Student</option>
-        <option value="admin">Admin</option>
-      </select>
+    <div class="container">
+        <h2>EdVenture Login</h2>
+        <form id="login-form">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <label for="role">Role</label>
+                <select id="role" name="role" required>
+                    <option value="student">student</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+            <div class="actions">
+                <button type="submit">Login</button>
+                <a href="forgetpage.html">Forgot Password?</a>
+            </div>
+        </form>
+    </div>
 
-      <button type="submit">Login</button>
-    </form>
-    <button id="register-btn">Register</button>
-  </div>
+    <script>
+        // Handle the form submission
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
 
-  <script src="app.js"></script>
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const role = document.getElementById("role").value;  // Get the selected role
+
+            // Normally, you'd send this data to the backend, but for now, we'll handle the redirect based on the role
+            if (username && password) {
+                // Simple check to redirect based on role
+                if (role === "admin") {
+                    window.location.href = "admin.html"; // Redirect to admin page
+                } else if (role === "student") {
+                    window.location.href = "student.html"; // Redirect to user page (You can change the URL as needed)
+                } else {
+                    alert("Invalid role selected.");
+                }
+            } else {
+                alert("Please enter both username and password.");
+            }
+        });
+    </script>
 </body>
 </html>

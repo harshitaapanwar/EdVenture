@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Dashboard</h2>
+      <ul>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#create-project">Create Project</a></li>
+        <li><a href="#active-projects">Active Projects</a></li>
+        <li><a href="#completed-projects">Completed Projects</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Section -->
+    <div class="main">
+      <!-- Header -->
+      <header class="header">
+        <nav>
+          <ul class="menu">
+            <li class="menu-item">
+                <a href="project.html">Project</a>
+                
+              </li>
+              <li class="menu-item">
+                <a href="assignment.html">Assignment</a>
+                
+              </li>
+            <li class="menu-item">
+              <a href="todolist.html">To-DoList</a>
+              
+            </li>
+            <li class="menu-item">
+                <a href="#">Issues</a>
+                <ul class="dropdown">
+                  <li><a href="#">View Issue</a></li>
+                  <li><a href="#">Ask to Chatbot</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#">Feedback</a>
+                <ul class="dropdown">
+                  <li><a href="#">Alumni Feedback</a></li>
+                  <li><a href="#">Edit Feedback</a></li>
+                  <li><a href="#">Logout</a></li>
+                </ul>
+            </li>
+            <li>
+              <form class="search-form">
+                <input type="text" id="search-bar" placeholder="Search..." />
+                <ul id="suggestions-list" class="suggestions-list"></ul>
+              </form>
+            </li>
+            <li class="menu-item">
+                <a href="#">AdminProfile</a>
+                <ul class="dropdown">
+                  <li><a href="#">View Profile</a></li>
+                  <li><a href="#">Edit Profile</a></li>
+                  <li><a href="#">Logout</a></li>
+                </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Content Section -->
+      <section class="content">
+        <h1>Welcome to the Project Dashboard</h1>
+        <p>Select an option from the left sidebar to get started.</p>
+      </section>
+    </div>
+  </div>
+
+  <script src="student.js"></script>
+</body>
+</html>

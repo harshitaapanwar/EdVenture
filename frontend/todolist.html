@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="todolist.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>To-Do List</h2>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Add Task</a></li>
+        <li><a href="#">View Tasks</a></li>
+        <li><a href="#">Completed Tasks</a></li>
+        <li><a href="#">Pending Tasks</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Section -->
+    <div class="main">
+      <!-- Header -->
+      <header class="header">
+        <nav>
+          <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Content Section -->
+      <section class="content">
+        <h1>Manage Your To-Do List</h1>
+
+        <!-- Task Form -->
+        <div class="task-section">
+          <h2>Add a New Task</h2>
+          <form id="task-form">
+            <input type="text" id="task-title" placeholder="Task Title" required>
+            <textarea id="task-details" placeholder="Task Details" required></textarea>
+            <button type="submit">Add Task</button>
+          </form>
+        </div>
+
+        <!-- Task List -->
+        <div id="task-list" class="task-section">
+          <h2>Your Tasks</h2>
+          <div class="task-item empty">
+            <p>No tasks added yet!</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="todolist.js"></script>
+</body>
+</html>
